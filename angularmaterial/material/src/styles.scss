@@ -1,0 +1,30 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+.ag-theme-alpine {
+    @include ag-theme-alpine((
+         alpine-active-color: deeppink
+        
+
+    ));
+    --ag-foreground-color: blue
+}
+ag-grid-angular {
+    margin: auto;
+   
+}
+.ag-theme-alpine .ag-header-cell-label {
+    font-style: italic;
+    // pagination{
+    //     height: 10px;
+    // }
+}
+button {
+    margin-left: 45%;
+
+}
+.ag-header-cell {
+    background-color: #000;
+    color: #FFF;
+}

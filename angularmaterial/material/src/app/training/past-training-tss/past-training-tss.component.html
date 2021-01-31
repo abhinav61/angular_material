@@ -1,0 +1,30 @@
+
+<button (click)="addRow()">add row</button>
+
+
+<div *ngIf="alert" class="alert" role="alert">
+    Data is Deleted successfully !.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<button (click)="deleteRow()">Delete Row</button>
+
+
+<button  (click)="updateRow()">Update Row</button>
+
+<ag-grid-angular 
+    #agGrid
+    style="width: 500px; height: 450px"
+    class="ag-theme-alpine"
+    [rowData]="rowData | async"
+   (gridReady)="onGridReady($event)"
+   [gridOptions]="gridOptions"
+   
+    [columnDefs]="columnDefs"
+    rowSelection="multiple"
+    [animateRows]= "true"
+    [pagination]="true"
+    >
+</ag-grid-angular>
